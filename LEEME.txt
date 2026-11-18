@@ -1,0 +1,28 @@
+MINI DONAS - VERSION CON VENTANA
+
+1. Descomprima este ZIP en una carpeta nueva.
+2. Abra EJECUTAR.bat (requiere JDK 8 o posterior en PATH).
+3. Se abre una ventana con formularios, botones y tablas.
+
+En VS Code: abra ESTA carpeta y ejecute el main de
+AnalisisNumericoMiniDonas.java. No ejecute la copia anterior de consola.
+
+Manual:
+javac -encoding UTF-8 AnalisisNumericoMiniDonas.java
+java AnalisisNumericoMiniDonas
+
+Botones: Biseccion, Newton-Raphson, Comparar ambos, Restaurar ejemplo, Salir.
+Ingrese numeros sin separadores de miles; se admite punto o coma decimal.
+Al modificar los datos se borran los resultados anteriores para evitar confusiones.
+Las tablas de iteraciones estan en sus pestanas. Los datos no se guardan al cerrar.
+
+Q(P)=A-k*P. A es demanda teorica a precio cero; k es la reduccion de demanda
+por cada peso adicional. Unidad: una mini dona. Datos de ejemplo hipoteticos.
+f(P)=(P-costo)*Q(P)-costos fijos-ganancia objetivo.
+f'(P)=A+k*costo-2*k*P.
+El dominio es [0,A/k]. Puede haber dos raices.
+
+Biseccion: semiancho <= tolerancia. Newton: diferencia sucesiva <= tolerancia.
+Ambos aceptan raices exactas. Los criterios no son equivalentes: revise el residuo.
+Ejemplo: precio 5683.375210 aproximadamente, 16 reducciones de Biseccion y
+4 iteraciones de Newton. Las ventas y ganancias reales dependen del modelo.
